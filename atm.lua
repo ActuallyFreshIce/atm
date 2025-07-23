@@ -12,7 +12,7 @@ local SECRET_KEY = "UltraSecretKey123"
 -- Simple SHA-256 implementation (pure Lua)
 -- based on public domain code
 local function sha256(msg)
-    local band, bor, bxor, rshift, rrotate = bit32.band, bit32.bor, bit32.bxor, bit32.rshift, bit32.rrotate
+    local band, bor, bxor, bnot, rshift, rrotate = bit32.band, bit32.bor, bit32.bxor, bit32.bnot, bit32.rshift, bit32.rrotate
     local K = {
         0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
         0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
